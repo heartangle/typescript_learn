@@ -1,0 +1,23 @@
+{
+    "name": "typescript_learn",
+    "version": "1.0.0",
+    "description": "为学习 typescript 创建的仓库",
+    "main": "index.js",
+    "dependencies": {},
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon --watch src -e ts --exec ts-node .\\src\\index.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/heartangle/typescript_learn.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/heartangle/typescript_learn/issues"
+    },
+    "homepage": "https://github.com/heartangle/typescript_learn#readme"
+}
