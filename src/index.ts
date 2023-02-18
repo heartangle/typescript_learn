@@ -98,12 +98,58 @@
 // const res2 = combine("3", "3");
 // // const res3 = combine(3, "3"); ts 检查报错
 
-function sum(a: number, b: number, c?: number) {
-  if (c) {
-    return a + b + c;
-  } else {
-    return a + b;
-  }
+// function sum(a: number, b: number, c?: number) {
+//   if (c) {
+//     return a + b + c;
+//   } else {
+//     return a + b;
+//   }
+// }
+
+// sum(3, 4);
+
+// type Deckk =
+
+// function createDeck(): Deck {}
+
+// let gender: "男" | "女";
+
+// function getGneder(g: "男" | "女") {}
+
+// enum Gender {
+//   Male = "男",
+//   Female = "女",
+// }
+
+// let g: Gender;
+// g = Gender.Male; // 使用时是逻辑名称
+
+// console.log("debug", g); // 输出时时真实的值
+
+// enum Level {
+//   level1,
+//   level2,
+// }
+
+// console.log(Level.level1);
+
+enum Permission {
+  Read = 1, // 2^0 0001
+  Write = 2, // 2^1 0010
+  Create = 4, // 2^2 0100
+  Delete = 8, // 2^3 1000
 }
 
-sum(3, 4);
+let p: Permission = Permission.Read | Permission.Write;
+
+// 判断变量是否有某个权限
+function hasPermission(target: Permission, per: Permission): boolean {
+  return (target & per) === per;
+}
+
+const res: boolean = hasPermission(p, Permission.Create);
+console.log("debug", res);
+
+// 删除某个权限
+p = p ^ Permission.Read;
+console.log("debug", p);
